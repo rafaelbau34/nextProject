@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Link from "next/link"; // For the "Regresar" link
+import Link from "next/link"; // Import Link for navigation
 
 export default function ResetPassword() {
   return (
@@ -37,9 +37,12 @@ export default function ResetPassword() {
           </div>
 
           <div className="flex justify-center">
-            <Button className="bg-green-500 text-white px-4 py-2 rounded-md text-sm hover:bg-green-600">
-              ENVIAR
-            </Button>
+            {/* Wrap Button in Link to navigate to cambiarcontra */}
+            <Link href="/cambiarcontra">
+              <Button className="bg-green-500 text-white px-4 py-2 rounded-md text-sm hover:bg-green-600">
+                ENVIAR
+              </Button>
+            </Link>
           </div>
 
           <div className="flex justify-center mt-4">
