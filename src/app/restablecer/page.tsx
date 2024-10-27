@@ -14,6 +14,8 @@ export default function ResetPassword() {
         style={{
           borderRadius: "40px", // Match the Login component
           borderWidth: "4px", // Match the Login component
+          borderColor: "#FF0000", // Bright red border
+          borderStyle: "solid", // Solid border style
         }}
       >
         <h2 className="text-2xl font-bold text-center mb-2 text-gray-800">
