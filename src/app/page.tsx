@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox"; // Import Checkbox
 import { useState } from "react";
 import Link from "next/link";
 import "./globals.css";
@@ -12,6 +13,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [keepSignedIn, setKeepSignedIn] = useState(false); // State for checkbox
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -20,23 +22,21 @@ export default function Login() {
       return;
     }
     setError("");
-    console.log("Login:", { email, password });
+    console.log("Login:", { email, password, keepSignedIn });
   };
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-50">
       <Card
-        className="p-8 w-full max-w-sm bg-amber-50 shadow-md" // Changed max-w-md to max-w-sm for smaller width
+        className="p-8 w-full max-w-md bg-amber-50 rounded-[50px] border-4 border-red-500 shadow-md"
         style={{
-          borderRadius: "60px", // Rounder corners
-          borderWidth: "4px", // Thin border
-          borderColor: "#FF0000", // Bright red border
-          borderStyle: "solid", // Solid border style
+          borderRadius: "80px",
+          borderWidth: "5px",
         }}
       >
         <h2
           className="text-4xl font-bold text-center mb-6"
-          style={{ fontFamily: "Gravitas One, sans-serif", color: "#FF0000" }} // Applying Gravitas One font and bright red color
+          style={{ fontFamily: "Gravitas One, sans-serif", color: "#FF0000" }}
         >
           Pizzasazo!
         </h2>
@@ -68,6 +68,20 @@ export default function Login() {
               className="border border-gray-400 w-full rounded-md px-3 py-2 bg-white"
             />
           </div>
+
+          {/* Checkbox */}
+          <div className="flex items-center mb-4 space-x-2">
+            <Checkbox
+              id="keep-signed-in"
+              checked={keepSignedIn}
+              onCheckedChange={(checked) => setKeepSignedIn(checked === true)}
+              className="mr-2"
+            />
+            <Label htmlFor="keep-signed-in" className="text-gray-700">
+              Mantener la sesión iniciada
+            </Label>
+          </div>
+
           <div className="flex justify-center">
             <Button
               type="submit"
@@ -81,10 +95,10 @@ export default function Login() {
               OLVIDE MI CONTRASEÑA
             </Link>
           </div>
-          <div className="flex justify-center mt-4 text-xs">
-            <a href="#" className="text-blue-500">
+          <div className="flex justify-center mt-10">
+            <Link href="#" className="text-blue-500">
               REGISTRATE AQUÍ
-            </a>
+            </Link>
           </div>
         </form>
       </Card>
