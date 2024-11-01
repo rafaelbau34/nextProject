@@ -96,7 +96,7 @@ export default function Login() {
             </Link>
           </div>
           <div className="flex justify-center mt-10">
-            <Link href="#" className="text-blue-500">
+            <Link href="/registro" className="text-blue-500">
               REGISTRATE AQUÍ
             </Link>
           </div>
