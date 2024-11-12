@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Register() {
   return (
@@ -16,10 +17,14 @@ export default function Register() {
       >
         {/* Left Section with Image Placeholder */}
         <div className="w-1/2 flex justify-center items-center bg-gray-100 border-r border-gray-300 p-6">
-          <div className="text-center">
-            <p className="text-gray-600 italic">
-              [Inserte imagen genérica de una pizza]
-            </p>
+          <div className="text-center w-full h-full">
+            <Image
+              src="/pizza.webp"
+              alt="Pizza"
+              width={500}
+              height={500}
+              className="object-cover w-full h-full"
+            />
           </div>
         </div>
 
@@ -43,9 +48,11 @@ export default function Register() {
             <Button className="w-full bg-gray-300 text-black py-2 rounded-md">
               CORREO ELECTRÓNICO
             </Button>
-            <Button className="w-full bg-green-500 text-white py-2 rounded-md">
-              TELÉFONO
-            </Button>
+            <Link href="/signupCell" className="w-full">
+              <Button className="w-full bg-green-500 text-white py-2 rounded-md">
+                TELÉFONO
+              </Button>
+            </Link>
             <Button className="w-full bg-white text-gray-600 border border-gray-300 py-2 rounded-md">
               <span className="text-blue-500 mr-1">G</span>
               <span className="text-red-500 mr-1">o</span>
