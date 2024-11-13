@@ -83,12 +83,14 @@ export default function Login() {
           </div>
 
           <div className="flex justify-center">
-            <Button
-              type="submit"
-              className="w-auto px-4 py-1 bg-gray-200 text-black border border-gray-500 rounded-md text-sm"
-            >
-              INICIAR SESIÓN
-            </Button>
+            <Link href="/inicio">
+              <Button
+                type="submit"
+                className="w-auto px-4 py-1 bg-gray-200 text-black border border-gray-500 rounded-md text-sm"
+              >
+                INICIAR SESIÓN
+              </Button>
+            </Link>
           </div>
           <div className="flex justify-center mt-4 text-xs">
             <Link href="/restablecer" className="text-blue-500">

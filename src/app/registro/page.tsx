@@ -45,9 +45,11 @@ export default function Register() {
 
           {/* Registration Options */}
           <div className="space-y-3 w-full flex flex-col items-center">
-            <Button className="w-full bg-gray-300 text-black py-2 rounded-md">
-              CORREO ELECTRÓNICO
-            </Button>
+            <Link href="/correo" className="w-full">
+              <Button className="w-full bg-gray-300 text-black py-2 rounded-md">
+                CORREO ELECTRÓNICO
+              </Button>
+            </Link>
             <Link href="/signupCell" className="w-full">
               <Button className="w-full bg-green-500 text-white py-2 rounded-md">
                 TELÉFONO
