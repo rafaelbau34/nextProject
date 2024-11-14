@@ -37,24 +37,26 @@ export default function AboutPage() {
           <Link href="/pedidos" className="text-lg font-bold">
             PEDIDOS
           </Link>
+          <Link href="/empleo" className="text-lg font-bold">
+            EMPLEO
+          </Link>
         </div>
 
         {/* Campo de Búsqueda Centrado */}
-        <div className="flex items-center w-full max-w-md justify-center">
+        <div className="flex items-center w-full justify-end">
           <Input
             placeholder="Buscar..."
-            className="w-56 px-3 py-1 rounded-md placeholder:text-sm placeholder:text-gray-500"
+            className="w-56 px-3 py-1 rounded-md placeholder:text-gray placeholder:opacity-80 bg-white"
           />
           <button className="ml-2 text-gray-600">🔍</button>
         </div>
 
         {/* Botones de Acción */}
-        <div className="flex items-center gap-4">
-          <Button className="bg-gray-300 text-black">Buscar</Button>
-          <Link href="/carrito">
+        <Link href="/carrito">
+          <div className="flex items-center gap-4">
             <button className="text-2xl">🛒</button>
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
 
       {/* About Section */}

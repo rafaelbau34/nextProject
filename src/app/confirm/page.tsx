@@ -1,10 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card } from "@/components/ui/card";
+import Link from "next/link";
 
-export default function CartPage() {
+export default function OrderConfirmation() {
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
       {/* Header Section */}
@@ -42,7 +43,6 @@ export default function CartPage() {
           </Link>
         </div>
 
-        {/* Campo de Búsqueda Centrado */}
         <div className="flex items-center w-full justify-end">
           <Input
             placeholder="Buscar..."
@@ -59,38 +59,30 @@ export default function CartPage() {
         </Link>
       </div>
 
-      {/* Cart Section */}
-      <div className="p-8">
-        <h2 className="text-4xl font-bold text-center mb-8 text-red-600">
-          Tu Carrito
-        </h2>
-        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
-          {/* Productos del Carrito */}
-          <div className="flex justify-between mb-4">
-            <p>Pizza Pepperoni</p>
-            <p>$149.99</p>
-          </div>
-          <div className="flex justify-between mb-4">
-            <p>Pizza Hawaiana</p>
-            <p>$139.99</p>
-          </div>
-
-          {/* Total */}
-          <hr className="my-4" />
-          <div className="flex justify-between font-bold">
-            <p>Total</p>
-            <p>$289.98</p>
-          </div>
-
-          {/* Botón de Pago */}
-          <Link href="/confirm">
-            <Button className="bg-red-500 text-white w-full mt-6">Pagar</Button>
-          </Link>
-        </div>
+      {/* Confirmation Message */}
+      <div className="flex-grow flex justify-center items-center bg-gray-50 px-4">
+        <Card className="p-10 max-w-2xl w-full text-center bg-white rounded-lg shadow-lg">
+          <h2
+            className="text-4xl font-bold mb-6 text-red-600"
+            style={{ fontFamily: "Gravitas One, sans-serif" }}
+          >
+            ¡Pedido Realizado!
+          </h2>
+          <p className="text-lg text-gray-700 mb-8">
+            Gracias por tu compra. Tu pedido ha sido procesado exitosamente y
+            estará listo muy pronto.
+          </p>
+          <Button className="bg-red-500 text-white py-3 px-8 rounded-md mb-6">
+            <Link href="/pedidos">Rastrear Pedido</Link>
+          </Button>
+          <Button className="bg-red-500 text-white py-3 px-8 rounded-md mb-6 ml-6">
+            <Link href="/inicio">Volver al Inicio</Link>
+          </Button>
+        </Card>
       </div>
 
       {/* Footer */}
-      <div className="bg-red-600 text-white py-4 flex justify-center items-center w-full mt-auto">
+      <div className="bg-red-600 text-white py-4 flex justify-center items-center w-full">
         <p>© 2024 Pizzasazo! Todos los derechos reservados.</p>
       </div>
     </div>
