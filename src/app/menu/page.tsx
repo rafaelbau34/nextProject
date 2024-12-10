@@ -68,25 +68,40 @@ export default function MenuPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             { name: "Pizza Margarita", price: "$129.99", img: "/marga.jpg" },
-            { name: "Pepperoni Lovers", price: "$149.99", img: "/pepe.jpg" },
+            { name: "Pepperoni Lovers", price: "$149.99", img: "/npp.jpg" },
             { name: "Hawaiana", price: "$139.99", img: "/hawa.jpg" },
             { name: "Vegetariana", price: "$139.49", img: "/vege.png" },
             { name: "BBQ Chicken", price: "$159.49", img: "/bbq.jpg" },
             { name: "4 Quesos", price: "$159.49", img: "/pizza-4-quesos.jpg" },
           ].map((pizza, index) => (
-            <Card key={index} className="p-4 shadow-lg">
-              <Image
-                src={pizza.img}
-                alt={pizza.name}
-                width={300}
-                height={200}
-                className="rounded-lg object-cover mb-4"
-              />
-              <h3 className="text-xl font-semibold">{pizza.name}</h3>
-              <p className="text-gray-700 mb-4">{pizza.price}</p>
-              <Button className="bg-red-500 text-white w-full">
-                Añadir al Carrito
-              </Button>
+            <Card
+              key={index}
+              className="flex flex-col items-stretch p-4 shadow-lg h-full"
+            >
+              {/* Image Section */}
+              <div className="relative w-full h-48 mb-4">
+                <Image
+                  src={pizza.img}
+                  alt={pizza.name}
+                  fill
+                  className="rounded-lg object-cover"
+                />
+              </div>
+
+              {/* Text Section */}
+              <div className="flex flex-col flex-grow">
+                <h3 className="text-xl font-semibold mb-2 text-center">
+                  {pizza.name}
+                </h3>
+                <p className="text-gray-700 mb-4 text-center">{pizza.price}</p>
+              </div>
+
+              {/* Button Section */}
+              <div className="mt-auto">
+                <Button className="bg-red-500 text-white w-full">
+                  Añadir al Carrito
+                </Button>
+              </div>
             </Card>
           ))}
         </div>

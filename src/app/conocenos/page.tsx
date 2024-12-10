@@ -58,50 +58,53 @@ export default function AboutPage() {
         </Link>
       </div>
 
-      {/* About Section */}
-      <div className="bg-white p-8">
-        <h2 className="text-4xl font-bold text-center mb-8 text-red-600">
-          Sobre Nosotros
-        </h2>
-        <p className="text-lg text-center max-w-2xl mx-auto mb-8">
-          En Pizzasazo! nos especializamos en ofrecer las mejores pizzas
-          artesanales. Con más de 20 años de experiencia, nos enorgullece
-          utilizar ingredientes frescos y de alta calidad. Nuestro objetivo es
-          hacerte disfrutar de una experiencia única con cada bocado.
-        </p>
-
-        {/* Historia Section */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <h3 className="text-2xl font-bold text-red-600 mb-4 text-center">
-            Nuestra Historia
-          </h3>
-          <p className="text-gray-700 text-center">
-            Fundada en 2004, Pizzasazo! comenzó como una pequeña pizzería
-            familiar. Con el tiempo, nos hemos expandido gracias a nuestra
-            dedicación y pasión por crear las mejores pizzas artesanales. Hoy en
-            día, seguimos manteniendo nuestras raíces y compromiso con la
-            calidad.
+      {/* Main Content with Equal Top and Bottom Margins */}
+      <div className="flex-grow flex flex-col justify-between p-8">
+        <div>
+          <h2 className="text-4xl font-bold text-center mb-8 text-red-600">
+            Sobre Nosotros
+          </h2>
+          <p className="text-lg text-center max-w-2xl mx-auto mb-8">
+            En Pizzasazo! nos especializamos en ofrecer las mejores pizzas
+            artesanales. Con más de 20 años de experiencia, nos enorgullece
+            utilizar ingredientes frescos y de alta calidad. Nuestro objetivo es
+            hacerte disfrutar de una experiencia única con cada bocado.
           </p>
-        </div>
 
-        {/* Valores Section */}
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-red-600 mb-4 text-center">
-            Nuestros Valores
-          </h3>
-          <ul className="list-disc list-inside text-gray-700">
-            <li>
-              Compromiso con la calidad y frescura de nuestros ingredientes.
-            </li>
-            <li>
-              Atención al cliente excepcional para brindar la mejor experiencia.
-            </li>
-            <li>
-              Innovación constante en nuestras recetas para sorprender a
-              nuestros clientes.
-            </li>
-            <li>Apoyo a la comunidad local y uso de productos regionales.</li>
-          </ul>
+          {/* Historia Section */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <h3 className="text-2xl font-bold text-red-600 mb-4 text-center">
+              Nuestra Historia
+            </h3>
+            <p className="text-gray-700 text-center">
+              Fundada en 2004, Pizzasazo! comenzó como una pequeña pizzería
+              familiar. Con el tiempo, nos hemos expandido gracias a nuestra
+              dedicación y pasión por crear las mejores pizzas artesanales. Hoy
+              en día, seguimos manteniendo nuestras raíces y compromiso con la
+              calidad.
+            </p>
+          </div>
+
+          {/* Valores Section */}
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-red-600 mb-4 text-center">
+              Nuestros Valores
+            </h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>
+                Compromiso con la calidad y frescura de nuestros ingredientes.
+              </li>
+              <li>
+                Atención al cliente excepcional para brindar la mejor
+                experiencia.
+              </li>
+              <li>
+                Innovación constante en nuestras recetas para sorprender a
+                nuestros clientes.
+              </li>
+              <li>Apoyo a la comunidad local y uso de productos regionales.</li>
+            </ul>
+          </div>
         </div>
       </div>
 

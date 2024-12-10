@@ -101,24 +101,44 @@ export default function HomePage() {
             {
               title: "Pepperoni Lovers",
               price: "$14.99",
-              img: "/pepe.jpg",
+              img: "/npp.jpg",
             },
-            { title: "Hawaiana", price: "$13.99", img: "/hawa.jpg" },
+            {
+              title: "Hawaiana",
+              price: "$13.99",
+              img: "/hawa.jpg",
+            },
           ].map((pizza, index) => (
-            <Card key={index} className="w-80 p-4 shadow-lg">
-              <Image
-                src={pizza.img}
-                alt={pizza.title}
-                width={320}
-                height={200}
-                className="rounded-lg object-cover mb-4"
-              />
-              <h3 className="text-xl font-semibold mb-2">{pizza.title}</h3>
-              <p className="text-gray-700 mb-2">{pizza.price}</p>
-              <Button className="bg-red-500 text-white w-full py-2 rounded-md">
+            <div
+              key={index}
+              className="flex flex-col justify-between w-[250px] md:w-[280px] lg:w-[300px] p-4 bg-white shadow-lg rounded-lg h-[400px]"
+            >
+              {/* Content Section */}
+              <div
+                className={`flex flex-col items-center space-y-2 ${
+                  pizza.title === "Pepperoni Lovers" ? "mt-4" : ""
+                }`}
+              >
+                <Image
+                  src={pizza.img}
+                  alt={pizza.title}
+                  width={250}
+                  height={200}
+                  className="rounded-lg object-cover"
+                />
+                <h3 className="text-lg font-semibold text-center min-h-[48px]">
+                  {pizza.title}
+                </h3>
+                <p className="text-gray-700 text-center text-sm">
+                  {pizza.price}
+                </p>
+              </div>
+
+              {/* Button Section */}
+              <button className="bg-red-500 text-white w-full py-2 rounded-md text-sm hover:bg-red-600 transition duration-200 mt-4">
                 Añadir al Carrito
-              </Button>
-            </Card>
+              </button>
+            </div>
           ))}
         </div>
       </div>
